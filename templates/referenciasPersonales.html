@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>
+    </title>
+
+    <style>
+        @import url("{{ STATIC_URL }}css/style.css");
+        @import url("{{ STATIC_URL }}css/informacionPersonal.css");
+        @import url("{{ STATIC_URL }}css/jquery-ui.min.css");
+        @import url("{{ STATIC_URL }}js/jTable/themes/lightcolor/blue/jtable.min.css");
+    </style>
+    <script src="{{ STATIC_URL }}js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}js/jquery-ui.min.js"></script>
+    <script src="{{ STATIC_URL }}js/jTable/jquery.jtable.min.js"></script>
+    <script src="{{ STATIC_URL }}js/jTable/jquery.jtable.es.js"></script>
+    <script src="{{ STATIC_URL }}jsForms/ajax.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}jsForms/referenciasPersonales.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="contenidoReferenciasLaborales">
+    <form class="contact_form" id="referenciasLaborales">
+        {% csrf_token %}
+        <div id="contenidoAjax">
+        </div>
+        <fieldset>
+            <legend><h5>Referencia 1:</h5></legend>
+            <table>
+                <tr>
+                    <td>
+                        <label class="labelsTd">Nombres: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="txtNombres0" id="txtNombres0" required>
+                    </td>
+
+                    <td>
+                        <label class="labelsTd">Apellidos: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="txtApellidos0" id="txtApellidos0" required>
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <label class="labelsTd">Teléfono:</label>
+                    </td>
+                    <td>
+                        <input type="tel" name="txtTelefono0" id="txtTelefono0">
+                    </td>
+
+                    <td>
+                        <label class="labelsTd">E-mail:</label>
+                    </td>
+                    <td>
+                        <input type="email" name="txtEmail0" id="txtEmail0">
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+         <fieldset>
+            <legend><h5>Referencia 2:</h5></legend>
+            <table>
+                <tr>
+                    <td>
+                        <label class="labelsTd">Nombres: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="txtNombres1" id="txtNombres1" required>
+                    </td>
+
+                    <td>
+                        <label class="labelsTd">Apellidos: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="txtApellidos1" id="txtApellidos1" required>
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <label class="labelsTd">Teléfono:</label>
+                    </td>
+                    <td>
+                        <input type="tel" name="txtTelefono1" id="txtTelefono1">
+                    </td>
+
+                    <td>
+                        <label class="labelsTd">E-mail:</label>
+                    </td>
+                    <td>
+                        <input type="email" name="txtEmail1" id="txtEmail1">
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend><h5>Referencia 3:</h5></legend>
+            <table>
+                <tr>
+                    <td>
+                        <label class="labelsTd">Nombres: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="txtNombres2" id="txtNombres2" required>
+                    </td>
+
+                    <td>
+                        <label class="labelsTd">Apellidos: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="txtApellidos2" id="txtApellidos2" required>
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <label class="labelsTd">Teléfono:</label>
+                    </td>
+                    <td>
+                        <input type="tel" name="txtTelefono2" id="txtTelefono2">
+                    </td>
+
+                    <td>
+                        <label class="labelsTd">E-mail:</label>
+                    </td>
+                    <td>
+                        <input type="email" name="txtEmail2" id="txtEmail2">
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+
+        <a id="img" title="Guardar"><img id="btnGuardar" src="{{ STATIC_URL }}css/images/save-icon.png"></a>
+
+    </form>
+</div>
+</body>
+</html>

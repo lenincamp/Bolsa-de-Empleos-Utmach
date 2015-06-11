@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        @import url("{{ STATIC_URL }}css/style.css");
+        @import url("{{ STATIC_URL }}css/style_base.css");
+        @import url("{{ STATIC_URL }}css/jquery-ui.min.css");
+        {% block css %}{% endblock %}
+    </style>
+    <script src="{{ STATIC_URL }}js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}js/jquery-ui.min.js"></script>
+    <script src="{{ STATIC_URL }}jsForms/ajax.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100' rel='stylesheet' type='text/css'>
+
+    {% block scripts %}{% endblock %}
+    <script>
+        $(document).ready(
+        /* This is the function that will get executed after the DOM is fully loaded */
+        function () {
+            /* Next part of code handles hovering effect and submenu appearing */
+            $('.nav li').hover(
+              function () { //appearing on hover
+                $('ul', this).fadeIn();
+              },
+              function () { //disappearing on hover
+                $('ul', this).fadeOut();
+              }
+            );
+          }
+        );
+    </script>
+</head>
+<body>
+
+    <!-- wrapper -->
+    <div id="wrapper">
+        <!-- shell -->
+        <div class="shell">
+            <!-- container -->
+            <div class="container" >
+                <!-- header -->
+                <header id="header" style="height: 150px;">
+                    <h1 id="logo"><a href="#">Retina</a></h1>
+                    <h1 id="logo2"><a href="#">Retina</a></h1>
+                </header>
+                <!-- end of header -->
+                <!-- navigaation -->
+
+                <div class="navigation " style="margin-top: -15px;">
+                    <ul class="nav">
+                        <li style="width: 400px;">
+                            <a href="/principalEmpleado/" id="inicioPagina1">{% block usuario%}{% endblock %}</a>
+                        </li>
+                        <li style="float: right;">
+                            <a href="/cerrarSesion/">Salir</a>
+                        </li>
+                        <li id="cambioClave" style="float: right; width: 170px;">
+                            <a>Modificar Contraseña</a>
+                        </li>
+                        <li style="float: right;">
+                            <a href="/principalEmpleado/" id="inicioPagina">Inicio</a>
+                        </li>
+
+
+                    </ul>
+                    <div class="cl">&nbsp;</div>
+                </div>
+
+                <!-- end of navigation -->
+
+                <!-- main -->
+                <div style="display: inline-block;">
+
+                        {% block Contenido %}  {% endblock %}
+
+                </div>
+                <!-- end of main -->
+
+
+                <!-- footer -->
+                <div id="footer">
+
+                    <p class="copy"><span>&copy; Copyright 2014</span></p>
+                    <div class="cl">&nbsp;</div>
+                </div>
+			<!-- end of footer -->
+
+
+
+            </div>
+            <!-- end of container -->
+        </div>
+    </div>
+
+    <form id="formDialogCambioClave" title="Modificar Contraseña" class="contact_form" method="post">
+        {% csrf_token %}
+
+        <ul>
+            <div id="error" style="width:100%;background: #ffef8f; color: #00acef;border: solid 1px #cd0a0a;display: none;"></div>
+
+            <li style="margin-top: -15px;">
+                <label  style="width: 100%">Contraseña : </label>
+                <input id="txtClave1" name="txtClave1" type="password" required  autocomplete="off">
+
+            </li>
+            <li style="margin-top: -15px;">
+                <label style="width: 100%">Repita Contraseña : </label>
+                <input id="txtClave2" name="txtClave2" type="password" required  autocomplete="off">
+
+            </li>
+
+        </ul>
+
+
+        <button id="btnCambioClave" type="submit" style="width: 88%">Guardar</button>
+
+    </form>
+</body>
+</html>

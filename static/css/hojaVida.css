@@ -1,0 +1,72 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    font: inherit;
+    vertical-align: baseline;
+}
+#menu,#content_hojaVida{
+    width:100%;
+    background:none repeat scroll 0% 0% #00acef;
+    height:auto;
+    min-height: 50px;
+    float: left;
+    margin-top: 1px;
+
+
+}
+#content_hojaVida{
+    background: #ffffff;
+
+}
+#content_menu{
+
+    margin-left: 3.5%;
+    margin-right: auto;
+
+}
+#menu a{
+    background:none repeat scroll 0% 0% #00acef ;
+    float:left;
+    display: block;
+    width:40px;
+    padding:10px 30px 10px 30px;
+    height:49px;
+    border-right:1px dotted white;
+
+    cursor:pointer;
+}
+#menu a:hover{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    /*background:none repeat scroll 0% 0% #2694e8;*/
+    background: linear-gradient(to bottom, #78b1ed 0%, #417bb5 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid   #4a4a4a;
+}
+#menu a:active{
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    background:none repeat scroll 0% 0% #00acef;
+
+}
+#menu a img{
+    align:"center";
+    border:0px;
+    height:50px;
+    width: 50px;
+    cursor:pointer;
+}
+.ui-dialog-title,.ui-button-text{
+    font-size: .75em;
+    font-family: Raleway, Lucida Grande, Lucida Sans, Arial, sans-serif;
+}
+#oficiosSubactividades img{
+    width: 60px !important;
+
+}

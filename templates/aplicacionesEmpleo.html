@@ -1,0 +1,20 @@
+{% extends "baseEmpleado.html" %}
+
+{% block scripts %}
+    <script src="{{ STATIC_URL }}jsForms/inicioEmpleador.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}js/jPages.min.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}jsForms/aplicacionesEmpleo.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block usuario %}
+    Bienvenido: {{ nombre }} {{ apellido }}
+{% endblock %}
+{% block Contenido %}
+    <div class="main" style="margin-top: 20px; ">
+        <div class="featured" style="width: 420px;height: auto;">
+            <ul id="content" class="content">
+            </ul>
+            <div class="holder"> </div>
+        </div>
+    </div>
+{% endblock %}

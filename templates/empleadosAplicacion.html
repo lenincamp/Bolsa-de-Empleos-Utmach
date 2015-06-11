@@ -1,0 +1,22 @@
+{% extends "baseEmpleado.html" %}
+{% block  css%}
+    @import url("{{ STATIC_URL }}js/jTable/themes/lightcolor/blue/jtable.min.css");
+{% endblock %}
+{% block scripts %}
+    <script src="{{ STATIC_URL }}jsForms/inicioEmpleador.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}js/jPages.min.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}js/jTable/jquery.jtable.min.js"></script>
+    <script src="{{ STATIC_URL }}js/jTable/jquery.jtable.es.js"></script>
+    <script src="{{ STATIC_URL }}jsForms/empleadosAplicacion.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block usuario %}
+    Bienvenido: {{ nombre }} {{ apellido }}
+{% endblock %}
+{% block Contenido %}
+        <div class="featured" style="width: 400px;height: auto;margin-top: 15px;">
+            <ul id="content" class="content">
+            </ul>
+            <div class="holder"> </div>
+        </div>
+{% endblock %}

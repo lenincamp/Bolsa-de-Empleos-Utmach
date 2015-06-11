@@ -1,0 +1,28 @@
+
+select{
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    box-shadow: 0 0 2px #ccc, 0 10px 15px #eee inset;
+    color: #888;
+    font-size: 12px;
+    transition: padding 0.25s ease 0s;
+    height:34px;
+    width: 150px;
+    margin-right: 5px;
+
+}
+.jtable-input .jtable-dropdown-input{
+    float: right;
+}
+.jtable-input-field-container,
+#AddRecordDialogSaveButton,
+.jtable-input-label,
+#EditDialogSaveButton,
+#DeleteDialogButton
+{
+    float: left;
+}
+
+

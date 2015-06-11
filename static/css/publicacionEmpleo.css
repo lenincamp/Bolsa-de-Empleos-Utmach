@@ -1,0 +1,46 @@
+.no-close .ui-dialog-titlebar-close {
+    display: none;
+}
+.no-close .ui-dialog-content{
+    overflow: hidden;
+}
+
+#frmPublicacionEmpleo fieldset{
+    padding: 5px 15px 5px 0px !important;
+}
+#frmPublicacionEmpleo table td{
+    text-align: left;
+}
+#frmPublicacionEmpleo table td label{
+    text-align: right;
+}
+#frmPublicacionEmpleo fieldset h5{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Raleway, sans-serif;
+}
+.labelsTd{
+    width: 192px !important;
+    text-indent: 20px;
+}
+
+#frmPublicacionEmpleo select{
+    padding-right: 15.8px;
+}
+#frmPublicacionEmpleo table{
+    margin: auto;
+}
+#btnGuardar:hover{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+#btnGuardar:active{
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}

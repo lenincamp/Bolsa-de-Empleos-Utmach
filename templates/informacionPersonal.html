@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        @import url("{{ STATIC_URL }}css/style.css");
+        @import url("{{ STATIC_URL }}css/jquery-ui.min.css");
+        @import url("{{ STATIC_URL }}css/informacionPersonal.css");
+    </style>
+    <script src="{{ STATIC_URL }}js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}js/jquery-ui.min.js"></script>
+    <script src="{{ STATIC_URL }}jsForms/ajax.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}jsForms/informacionPersonal.js" type="text/javascript"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <div id="contenido">
+
+        <form class="contact_form" id="informacionPersonal">
+            {% csrf_token %}
+            <div id="contenidoAjax">
+            </div>
+            <fieldset>
+                <legend><h5>Datos Personales:</h5></legend>
+                <table style="width: 100%" id="tbInformacionPersonal">
+                    <tr>
+                        <td>
+                            <label>Cédula : </label>
+                            <input id="txtCedula" name="txtCedula" type="text" required>
+
+                        </td>
+                        <td>
+                            <label>Nombres:</label>
+                            <input id="txtNombres" name="txtNombres" type="text" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Apellidos:</label>
+                            <input id="txtApellidos" name="txtApellidos" type="text" required>
+                        </td>
+                        <td>
+                            <label>E-mail:	</label>
+                            <input id="txtEmail" name="txtEmail" type="email" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Celular:</label>
+                            <input id="txtTelefono1" name="txtTelefono1" type="text" >
+                        </td>
+                        <td>
+                            <label>Convencional:</label>
+                            <input id="txtTelefono2" name="txtTelefono2" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Fecha Nacimiento:</label>
+                            <input id="txtFechaNacimiento" name="txtFechaNacimiento" type="text" size="30">
+                        </td>
+                        <td>
+                            <label>Edad:</label>
+                            <input id="txtEdad" type="text" disabled>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Etnia:</label>
+                            <select id="cmbEtnia" name="cmbEtnia">
+                                <option value="1">Afroecuatoriano/Afrodescendiente</option>
+                                <option value="2">Blanco/a</option>
+                                <option value="3">Indígena</option>
+                                <option value="4">Mestizo/a</option>
+                                <option value="5">Montubio/a</option>
+                            </select>
+
+                        </td>
+
+                        <td>
+                            <label>Estado Civil:</label>
+                            <select id="cmbEstadoCivil" name="cmbEstadoCivil">
+                                <option value="1">Casado(A)</option>
+                                <option value="2">Divorciado(A)</option>
+                                <option value="3">Soltero(A)</option>
+                                <option value="4">Union Libre</option>
+                                <option value="5">Viudo(A)</option>
+                            </select>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label >Estado Laboral:</label>
+                            <select id="cmbEstadoLaboral" name="cmbEstadoLaboral">
+                                <option value="D">Desempleado(A)</option>
+                                <option value="E">Empleado(A)</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label >Sexo:</label>
+                            <select id="cmbSexo" name="cmbSexo">
+                                <option value="m">Masculino</option>
+                                <option value="f">Femenino</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label >Tipo Sangre:</label>
+                            <select id="cmbTipoSangre" name="cmbTipoSangre">
+                                <option value="1">(A)-</option>
+                                <option value="2">(A)+</option>
+                                <option value="3">(AB)-</option>
+                                <option value="4">(AB)+</option>
+                                <option value="5">(B)-</option>
+                                <option value="6">(B)+</option>
+                                <option value="7">(O)-</option>
+                                <option value="8">(O)+</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend><h5>Dirección Domiciliaria Actual:</h5></legend>
+                <table id="tbdireccionDomiciliaria">
+                    <tr>
+                        <td>
+                            <label>Calle Principal:</label>
+                            <input id="txtCallePrincipal" name="txtCallePrincipal" type="text" required>
+                        </td>
+                        <td>
+                            <label>Calle Secundaria:</label>
+                            <input id="txtCalleSecundaria" name="txtCalleSecundaria" type="text" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Número:</label>
+                            <input id="txtNumero" name="txtNumero" type="text"required>
+                        </td>
+
+                        <td>
+                            <label>Provincia : </label>
+                            <select id="cmbProvincia" name="cmbProvincia"></select>
+                        </td>
+                    <tr>
+                        <td>
+                            <label>Ciudad : </label>
+                            <select id="cmbCiudad" name="cmbCiudad"></select>
+                        </td>
+
+                        <td>
+                            <label>Sector : </label>
+                            <select id="cmbSector" name="cmbSector">
+                                <option value="Norte">Norte</option>
+                                <option value="Sur">Sur</option>
+                                <option value="Este">Este</option>
+                                <option value="Oeste">Oeste</option>
+                            </select>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Referencia:</label>
+                            <input id="txtReferencia" name="txtReferencia" style="width:77%">
+                        </td>
+                    </tr>
+
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend><h5>Participación de Personas con discapacidad y Enfermedades Catastróficas:</h5></legend>
+                <table id="tbDiscapacidades">
+                    <tr>
+                        <td>
+                            Tienes algun tipo de Discapacidad?
+                        </td>
+                        <td>
+                            <input type="radio" name="rBtnDiscapacidad" value=true> <label style="width: 40px;margin-top:-5px; ">Si</label>
+                            <input type="radio" name="rBtnDiscapacidad" value=false checked><label style="width: 40px;margin-top:-5px;  ">No</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tienes alguna enfermedad Catastrófica?
+                        </td>
+                        <td>
+                            <input type="radio" name="rBtnEnfermedadCatastrofica" value=true> <label style="width: 40px; margin-top: -5px; ">Si</label>
+                            <input type="radio" name="rBtnEnfermedadCatastrofica" value=false checked><label style="width: 40px; margin-top: -5px;">No</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Tienes a cargo un familiar con Discapacidad Severa?
+                        </td>
+
+                        <td>
+                            <input type="radio" name="rBtnCargoFamiliarDiscapacidad" value=true> <label style="width: 40px; margin-top: -5px; ">Si</label>
+                            <input type="radio" name="rBtnCargoFamiliarDiscapacidad" value=false checked><label style="width: 40px; margin-top: -5px;  ">No</label>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Tienes a cargo un familiar con Enfermedad Catastrófica?
+                        </td>
+                        <td>
+                        <input type="radio" name="rBtnCargoFamiliarCatastrofica" value=true> <label style="width: 40px; margin-top: -5px;  ">Si</label>
+                        <input type="radio" name="rBtnCargoFamiliarCatastrofica" value=false checked><label style="width: 40px; margin-top: -5px; ">No</label>
+                        </td>
+                    </tr>
+
+                </table>
+            </fieldset>
+
+            <a id="img" title="Guardar"><img id="btnRegistro" src="{{ STATIC_URL }}css/images/save-icon.png"></a>
+
+        </form>
+
+    </div>
+</body>
+</html>

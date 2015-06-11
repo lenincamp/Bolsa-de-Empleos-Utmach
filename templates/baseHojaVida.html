@@ -1,0 +1,57 @@
+{% extends "baseEmpleado.html" %}
+{% block css %}
+    @import url("{{ STATIC_URL }}css/hojaVida.css");
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ STATIC_URL }}jsForms/inicioEmpleado.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block usuario %}
+    Bienvenido: {{ nombre }} {{ apellido }}
+{% endblock %}
+{% block Contenido %}
+
+    <div id="menu">
+        <div id="content_menu">
+            <a title="Información Personal" id="informacionPersonal" style="border-left: dotted 1px #ffffff">
+                <img src="{{ STATIC_URL }}css/images/menu/informacion_personal.png">
+            </a>
+            <a id="preferenciasLaborales" title="Preferencias Laborales">
+                <img src="{{ STATIC_URL }}css/images/menu/preferencias_laborales.png">
+            </a>
+            <a id="oficiosSubactividades" title="Oficios/Subactividades">
+                <img src="{{ STATIC_URL }}css/images/menu/oficios_subactividades.png">
+            </a>
+            <a id="idiomas" title="Idiomas" >
+                <img src="{{ STATIC_URL }}css/images/menu/idiomas.png" style="width:60px;height:60px;position:relative;top: -7px;">
+            </a>
+            <a id="experiencia" title="Experiencia">
+                <img src="{{ STATIC_URL }}css/images/menu/experiencia.png" style="width:70px;height:50px;position:relative;left: -15px;">
+            </a>
+            <a id="capacitaciones" title="Capacitaciones">
+                <img src="{{ STATIC_URL }}css/images/menu/capacitaciones.png" style="width:70px;position:relative;left: -15px;">
+            </a>
+            <a id="instruccionFormal" title="Instrucción Formal">
+                <img src="{{ STATIC_URL }}css/images/menu/instruccion_formal.png">
+            </a>
+
+            <a id="logrosPersonales" title="Logros">
+                <img src="{{ STATIC_URL }}css/images/menu/logros.png">
+            </a>
+            <a id="referenciasPersonales" title="Referencias Personales">
+                <img src="{{ STATIC_URL }}css/images/menu/referencias_personales.png">
+            </a>
+        </div>
+
+
+    </div>
+
+    <!-- end of navigation -->
+
+    <!-- main -->
+    <div id="content_hojaVida">
+           <iframe id="cargaMenuHojaVida" src="/principalEmpleado/hojaVida/informacionPersonal/" style="width: 100%;min-height: 475px;height:auto;border: 0;"></iframe>
+    </div>
+
+{% endblock %}

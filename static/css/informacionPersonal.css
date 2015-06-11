@@ -1,0 +1,117 @@
+#img{
+    margin-left: 48%;
+    margin-top: 5px;
+    cursor: pointer;
+    height:auto;
+    min-height: 50px;
+    float: left;
+
+}
+a:hover{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+
+
+}
+
+a:active{
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+
+
+}
+#contenido{
+    margin: 20px 90px 0px 90px;
+}
+#contenidoPreferenciasLaborales{
+    margin: 20px 150px 0px 150px;
+}
+#contenidoReferenciasLaborales{
+    margin: 20px 150px 0px 150px;
+}
+#informacionPersonal fieldset{
+    padding-top:10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#referenciasLaborales fieldset{
+    padding-top:10px;
+    padding-left: 0px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#preferenciasLaborales fieldset{
+    padding-left: 0px;
+}
+
+fieldset h5{
+    font-size: 13px;
+}
+input[type="radio"]{
+    width: 15px;
+    float: left;
+
+}
+select{
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    box-shadow: 0 0 2px #ccc, 0 10px 15px #eee inset;
+    color: #888;
+    font-size: 12px;
+    transition: padding 0.25s ease 0s;
+
+    height:34px;
+}
+select[class="ui-datepicker-year"], select[class="ui-datepicker-month"]{
+    padding: 0px;
+    box-shadow:none;
+    margin-bottom: 0px;
+
+}
+#cmbEtnia{
+    width: 237px;
+}
+#tbdireccionDomiciliaria label,#tbInformacionPersonal label{
+    width: 115px !important;
+}
+#informacionPersonal table td{
+    width: 402px;
+}
+.no-close .ui-dialog-titlebar-close {
+    display: none;
+}
+.no-close .ui-dialog-content{
+    overflow: hidden;
+}
+
+#tbpreferenciasLaborales{
+    margin-left: auto;
+    margin-right: auto;
+}
+#tbpreferenciasLaborales label{
+    width: 350px;
+}
+#tbpreferenciasLaborales input[type='checkbox']{
+    width: auto;
+}
+
+.trOculta{
+    display: none;
+}
+.labelsTd{
+ float: right !important;
+ width: 60px !important;
+ margin-left: 20px !important;
+}

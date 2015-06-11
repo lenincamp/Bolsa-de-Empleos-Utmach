@@ -1,0 +1,27 @@
+#AddRecordDialogSaveButton,
+#EditDialogSaveButton,
+#DeleteDialogButton
+{
+    float: left;
+}
+
+input, select, textarea{
+    padding: 5px 2px;
+    margin-left: 20px;
+}
+input{
+    width: 180px;
+}
+.jtable-input-label{
+    margin-left: 20px;
+
+
+}
+.jtable-input {
+    float: right;
+    position: relative;
+    top: -30px;
+}
+#jtable-edit-form, #jtable-create-form{
+    width: 410px;
+}
